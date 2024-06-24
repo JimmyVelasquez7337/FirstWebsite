@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin: -8px -8px 0 -8px;
+    padding: 25px 20px;/* 0 5px 10px 8px; */
+    border-bottom: 5px solid #008cff;
+    background-color: black;
+    align-items: center;
+  }
+
+  .container a {
+    margin-right: 15px;
+    align-items: center;
+    /* padding: 25px 20px; */
+    
+  }
+
+  .container img {
+    /* display: flex;
+    justify-content: flex-start; */
+    max-height: 50px;
+    overflow: auto;
+    margin-right: auto;
+    /* padding: 100; */
+    display: block;
+  }
+
+
+  a {
+    font-family: Georgia, serif; 
+    color: white;
+    text-decoration: none;
+  }
+
+  a.active {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #008cff;
+  }
+
+  /* @media screen and (max-width: 768px) {
+    .container {
+        justify-content: center; /* Center items on smaller screens */
+    /*}*/
+
+    /* .item {
+        margin-left: 0; /* Remove margin on smaller screens */
+        /* margin-bottom: 10px; Add vertical spacing between items */
+    /* } */
+/*}*/
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left * {
+  margin-right: 25px;
+}
+
+/* .logo {
+  height: fit-content(50px);
+  padding: 0;
+} */
+
+
+ 

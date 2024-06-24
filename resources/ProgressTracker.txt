@@ -1,0 +1,4 @@
+Start creating pages, formatting them, and then finally figuring out the contact me page where employers can message you from that page. (04/22/24)
+Retune knowledge and skills when it comes to HTML, CSS, and general angular usage. (06/21/24)
+Figure out way to have contact-me page allow people to directly write message and send to my email. Use template or figure it out yourself. Avoid messing up other
+components while you do that! (06/24/24)
