@@ -9,27 +9,20 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { SiteFooterComponent } from './site-footer/site-footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ServicesService } from './contact.service';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SiteHeaderComponent,
-    ProjectsComponent,
-    AboutMeComponent,
-    ContactMeComponent,
-    SiteFooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [ServicesService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        SiteHeaderComponent,
+        ProjectsComponent,
+        AboutMeComponent,
+        ContactMeComponent,
+        SiteFooterComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule], providers: [ServicesService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

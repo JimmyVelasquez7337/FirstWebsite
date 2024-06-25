@@ -7,8 +7,8 @@ import { ServicesService } from '../contact.service';
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.css']
 })
-export class ContactMeComponent implements OnInit {
-  FormData: FormGroup;
+export class ContactMeComponent /*implements OnInit*/ {
+  /* FormData: FormGroup;
   constructor(private builder: FormBuilder, private contact: ServicesService) { }
 
   ngOnInit() {
@@ -16,10 +16,10 @@ export class ContactMeComponent implements OnInit {
       Fullname: new FormControl('', [Validators.required]),
       Email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
       Comment: new FormControl('', [Validators.required])
-    });
+    }); */
   }
 
-  onSubmit(FormData) {
+ /*  onSubmit(FormData) {
     console.log(FormData)
     this.contact.PostMessage(FormData)
       .subscribe(response => {
@@ -30,4 +30,4 @@ export class ContactMeComponent implements OnInit {
         console.log({ error })
       })
   }
-}
+} */
