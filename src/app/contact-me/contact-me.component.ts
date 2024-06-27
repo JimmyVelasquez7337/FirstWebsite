@@ -17,6 +17,36 @@ export class ContactMeComponent /*implements OnInit*/ {
       Email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
       Comment: new FormControl('', [Validators.required])
     }); */
+    formData = {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    };
+  
+    constructor(private serviceService: ServicesService) { }
+  
+    submitForm() {
+      this.serviceService.sendEmail(this.formData).subscribe(
+        response => {
+          alert('Message sent successfully');
+          this.resetForm();
+        },
+        error => {
+          console.error('Error sending message:', error.message);
+          alert(error.message + ' Failed to send message. Please try again later.');
+        }
+      );
+    }
+  
+    resetForm() {
+      this.formData = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      };
+    }
   }
 
  /*  onSubmit(FormData) {

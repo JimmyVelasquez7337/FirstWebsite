@@ -1,1 +1,20 @@
-<p>Contact Me Works</p>
+<!-- <p>Contact Me Works</p> -->
+<form (ngSubmit)="submitForm()">
+    <div>
+      <label>Name:</label>
+      <input type="text" name="name" [(ngModel)]="formData.name" required>
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email" [(ngModel)]="formData.email" required>
+    </div>
+    <div>
+      <label>Subject:</label>
+      <input type="text" name="subject" [(ngModel)]="formData.subject" required>
+    </div>
+    <div>
+      <label>Message:</label>
+      <textarea name="message" [(ngModel)]="formData.message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
